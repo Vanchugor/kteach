@@ -1,20 +1,37 @@
 <template>
-    <section class="deadline-info">
-        <div class="header">
-            Ближайший дедлайн через
-        </div>
-        <div class="body">
-            10:27:02
-        </div>
-        <div class="footer">
-            <a href="#">На страницу цикла</a>
-        </div>
-    </section>
+    <BaseSection :sectionClass="sectionClass"
+                 :headerText="headerText"
+                 :bodyText="bodyText"
+                 :footerLink="footerLink"
+                 :footerLinkText="footerLinkText">
+    </BaseSection>
 </template>
 
 <script>
+import BaseSection from "@/components/aside/BaseSection";
+
 export default {
-  name: "DeadlineSection"
+    name: "DeadlineSection",
+    computed: {
+        sectionClass: function () {
+            return "deadline-info";
+        },
+        headerText: function () {
+            return undefined;
+        },
+        bodyText: function () {
+            return "Ближайший дедлайн через: ";
+        },
+        footerLink: function () {
+            return "#";
+        },
+        footerLinkText: function () {
+            return "К циклу";
+        },
+    },
+    components: {
+        BaseSection
+    },
 }
 </script>
 
