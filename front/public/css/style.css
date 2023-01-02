@@ -47,6 +47,50 @@ header nav ul li a {
     text-transform: uppercase;
 }
 
+.middle aside {
+    float: right;
+    width: 20rem;
+
+    margin-top: 1rem;
+}
+
+aside section {
+    border: 1px solid var(--border-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
+}
+
+aside section .header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.25rem;
+    font-weight: bold;
+    color: var(--caption-color);
+}
+
+aside section .header:before {
+    content: "→";
+}
+
+aside section .body {
+    padding: 1rem;
+}
+
+aside section .footer {
+    border-top: 1px solid var(--border-color);
+    overflow: auto;
+    padding: 0.25rem;
+}
+
+aside section .footer a {
+    float: right;
+    font-size: 0.75rem;
+}
+
+aside section .footer a:after {
+    content: " →";
+}
+
 footer {
     border-top: 1px solid var(--border-color);
     overflow: auto;
