@@ -8,12 +8,15 @@
 import Task from "@/components/patterns/Task.vue";
 
 export default {
-  name: "TaskCycle",
-  components: {Task},
+    // eslint-disable-next-line vue/multi-word-component-names
+  name: "Cycle",
+  components: {
+      Task
+  },
   props: ["cycle"],
   methods: {
     findTask: function (id) {
-      var ans = -1
+      let ans = -1;
       Object.values(this.$root.tasks).forEach(task => {
         if (task.id === id) {
           ans = task;
