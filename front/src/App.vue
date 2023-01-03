@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Middle/>
+    <Middle :tasksCycles="tasksCycles"/>
     <Footer/>
   </div>
 </template>
@@ -17,7 +17,10 @@ export default {
     Middle,
     Header,
     Footer,
-  }
+  },
+  data: function () {
+    return this.$root.$data;
+  },
 }
 </script>
 
