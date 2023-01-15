@@ -1,12 +1,12 @@
 <template>
   <div class="links">
-    ldldld
+      Useful Links
   </div>
 </template>
 
 <script>
 export default {
-  name: "UsefullLinks"
+  name: "UsefulLinks"
 }
 </script>
 
