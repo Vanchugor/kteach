@@ -5,7 +5,7 @@
             <ContactsSection/>
         </aside>
         <main>
-            <UsefullLinks v-if="page === 'UsefullLinks'"/>
+            <UsefulLinks v-if="page === 'UsefulLinks'"/>
             <CycleListPage v-if="page === 'CycleListPage'" :tasksCycles="tasksCycles"/>
             <Cycle v-if="page === 'Cycle'" :cycle="cycle"/>
         </main>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import UsefullLinks from "@/components/page/UsefullLinks.vue";
+import UsefulLinks from "@/components/page/UsefulLinks.vue";
 import CycleListPage from "@/components/page/CycleListPage.vue";
 import Cycle from "@/components/patterns/Cycle.vue";
 import ContactsSection from "@/components/aside/ContactsSection.vue";
@@ -28,7 +28,7 @@ export default {
     components: {
         Cycle,
         CycleListPage,
-        UsefullLinks,
+        UsefulLinks,
         ContactsSection,
         DeadlineSection,
     },

@@ -16,7 +16,7 @@
       <ul>
         <li><a href="#" @click.prevent="changePage('Info')">Информация</a></li>
         <li><a href="#" @click.prevent="changePage('CycleListPage')">Условия Задач</a></li>
-        <li><a href="#" @click.prevent="changePage('UsefullLinks')">Полезные ссылки</a></li>
+        <li><a href="#" @click.prevent="changePage('UsefulLinks')">Полезные ссылки</a></li>
       </ul>
     </nav>
   </header>
