@@ -1,12 +1,12 @@
 <template>
   <div>
-      Useful Links
+      Submit page
   </div>
 </template>
 
 <script>
 export default {
-  name: "UsefulLinksPage"
+  name: "SubmitPage"
 }
 </script>
 
