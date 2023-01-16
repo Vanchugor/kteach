@@ -21,8 +21,8 @@ export default {
     name: "TaskCycleLink",
     props: ["taskCycle"],
     methods: {
-        changeToCycle: function (taskCycle) {
-            this.$root.$emit("changeToCycle", taskCycle);
+        changeToCycle: function (cycle) {
+            this.$root.$emit("onChangePage", "CyclePage", {cycle});
         }
     }
 }

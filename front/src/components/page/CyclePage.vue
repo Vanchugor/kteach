@@ -9,7 +9,7 @@ import Task from "@/components/patterns/Task.vue";
 
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
-  name: "Cycle",
+  name: "CyclePage",
   components: {
       Task
   },
