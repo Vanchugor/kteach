@@ -1,7 +1,7 @@
 <template>
     <div class="tasks">
         <h3>Циклы: </h3>
-        <CycleLink v-for="task in Object.values(tasksCycles)" :taskCycle="task" :key="task.id"/>
+        <CycleLink v-for="cycle in Object.values(cycles)" :cycle="cycle" :key="cycle.id"/>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "CycleListPage",
     components: {CycleLink},
-    props: ["tasksCycles"],
+    props: ["cycles"],
 
 }
 </script>

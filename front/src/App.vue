@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header/>
-    <Middle :tasksCycles="tasksCycles"/>
+    <Middle :cycles="tasksCycles"/>
     <Footer/>
   </div>
 </template>
