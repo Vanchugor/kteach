@@ -6,9 +6,8 @@
         </aside>
         <main>
             <UsefulLinksPage v-if="page === 'UsefulLinksPage'"/>
-            <CycleListPage v-if="page === 'CycleListPage'" :tasksCycles="tasksCycles"/>
-            <CyclePage v-if="page === 'CyclePage'" :cycle="cycle"/>
-            <SubmitPage v-if="page === 'SubmitPage'"/>
+            <CycleListPage v-if="page === 'CycleListPage'" :cycles="cycles"/>
+            <SubmitPage v-if="page === 'SubmitPage'" :cycleId="submitCycleId"/>
             <TopListPage v-if="page === 'TopListPage'"/>
             <EnterPage v-if="page === 'EnterPage'"/>
             <RegisterPage v-if="page === 'RegisterPage'"/>
@@ -20,7 +19,6 @@
 <script>
 import UsefulLinksPage from "@/components/page/UsefulLinksPage.vue";
 import CycleListPage from "@/components/page/CycleListPage.vue";
-import CyclePage from "@/components/page/CyclePage.vue";
 import IndexPage from "@/components/page/IndexPage.vue";
 import TopListPage from "@/components/page/TopListPage.vue";
 import SubmitPage from "@/components/page/SubmitPage.vue";
@@ -33,10 +31,9 @@ export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: "Middle",
     data: function () {
-        return {page: 'IndexPage', cycle: null}
+        return {page: 'IndexPage', submitCycleId: undefined}
     },
     components: {
-        CyclePage,
         CycleListPage,
         IndexPage,
         TopListPage,
@@ -47,7 +44,7 @@ export default {
         ContactsSection,
         DeadlineSection,
     },
-    props: ["tasksCycles"],
+    props: ["cycles"],
     beforeCreate() {
         this.$root.$on("onChangePage", (page, kwargs = undefined) => {
             if (kwargs !== undefined) {

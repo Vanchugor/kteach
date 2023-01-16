@@ -1,6 +1,6 @@
 export default {
     tasksCycles: {
-        1: {id: 1, title: "Первая серия задач", tasksId: [2]},
+        1: {id: 1, title: "Первый цикл", tasksId: [2]},
         5: {id: 5, title: "Вторая серия задач", tasksId: [2, 3]},
     },
     tasks: {

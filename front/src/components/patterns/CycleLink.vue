@@ -1,47 +1,72 @@
 <template>
-    <div class="taskCycleLink">
-        <ul>
-            <li class="title">
-                <a href="#" @click.prevent="changeToCycle(taskCycle)">
-                    {{ taskCycle.title }}
-                </a>
-            </li>
-            <li class="task-number">Задач: 5</li>
-            <li class="date-from">Начало: 01.01.2023</li>
-            <li class="date-to">Конец: 10.01.2023</li>
-            <li class="send">
-                <a href="#">Сдать</a>
-            </li>
-        </ul>
+    <div class="task-cycle-link">
+        <div class="title"> {{ cycle.title }}</div>
+        <div class="class-number">Класс: 9</div>
+        <div class="deadline">Дедлайн: 10.01.2023</div>
+        <div class="submit" @click.prevent="changePage('SubmitPage', {submitCycleId: cycle.id})">
+            <a href="#">Сдать</a>
+        </div>
+        <div class="download">
+            <a href="#">Скачать условия</a>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "TaskCycleLink",
-    props: ["taskCycle"],
+    name: "CycleLink",
+    props: ["cycle"],
     methods: {
-        changeToCycle: function (cycle) {
-            this.$root.$emit("onChangePage", "CyclePage", {cycle});
-        }
-    }
+        changePage: function (page, kwargs = undefined) {
+            this.$root.$emit("onChangePage", page, kwargs);
+        },
+    },
 }
 </script>
 
 <style scoped>
-.taskCycleLink {
-    background: #E1E1E1;
+.task-cycle-link {
     margin-bottom: 0.5rem;
-    padding: 0.3rem;
-    text-align: left;
-}
-
-.taskCycleLink ul {
-    padding-left: 1rem;
-}
-
-.taskCycleLink ul li {
-    display: inline;
     margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: left;
+    overflow: auto;
+    border: 1px solid var(--border-color);
+}
+
+.task-cycle-link div {
+    height: 100%;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.task-cycle-link .title, .class-number, .deadline {
+    float: left;
+}
+
+.task-cycle-link .download, .submit {
+    float: right;
+}
+
+.task-cycle-link .title {
+    width: 30%;
+    padding-left: 1rem;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.task-cycle-link .submit {
+    border-left: 1px solid var(--border-color);
+}
+
+.task-cycle-link .submit, .download {
+    background: rgba(231, 229, 229, 0.99);
+}
+
+.task-cycle-link .submit a, .download a {
+    text-decoration: none;
+}
+
+.task-cycle-link .submit:hover, .download:hover {
+    background: rgb(183, 180, 180);
 }
 </style>
