@@ -1,12 +1,12 @@
 <template>
   <div>
-      Useful Links
+      Enter page
   </div>
 </template>
 
 <script>
 export default {
-  name: "UsefulLinksPage"
+  name: "EnterPage"
 }
 </script>
 

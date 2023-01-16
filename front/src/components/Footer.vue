@@ -12,5 +12,10 @@ export default {
 </script>
 
 <style scoped>
-
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    overflow: auto;
+    padding: 0.25rem;
+}
 </style>

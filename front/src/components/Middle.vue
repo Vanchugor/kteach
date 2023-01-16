@@ -8,6 +8,11 @@
             <UsefulLinksPage v-if="page === 'UsefulLinksPage'"/>
             <CycleListPage v-if="page === 'CycleListPage'" :tasksCycles="tasksCycles"/>
             <CyclePage v-if="page === 'CyclePage'" :cycle="cycle"/>
+            <SubmitPage v-if="page === 'SubmitPage'"/>
+            <TopListPage v-if="page === 'TopListPage'"/>
+            <EnterPage v-if="page === 'EnterPage'"/>
+            <RegisterPage v-if="page === 'RegisterPage'"/>
+            <IndexPage v-if="page === 'IndexPage'"/>
         </main>
     </div>
 </template>
@@ -16,6 +21,11 @@
 import UsefulLinksPage from "@/components/page/UsefulLinksPage.vue";
 import CycleListPage from "@/components/page/CycleListPage.vue";
 import CyclePage from "@/components/page/CyclePage.vue";
+import IndexPage from "@/components/page/IndexPage.vue";
+import TopListPage from "@/components/page/TopListPage.vue";
+import SubmitPage from "@/components/page/SubmitPage.vue";
+import EnterPage from "@/components/page/EnterPage.vue";
+import RegisterPage from "@/components/page/RegisterPage.vue";
 import ContactsSection from "@/components/aside/ContactsSection.vue";
 import DeadlineSection from "@/components/aside/DeadlineSection.vue";
 
@@ -28,7 +38,12 @@ export default {
     components: {
         CyclePage,
         CycleListPage,
+        IndexPage,
+        TopListPage,
+        SubmitPage,
         UsefulLinksPage,
+        EnterPage,
+        RegisterPage,
         ContactsSection,
         DeadlineSection,
     },
