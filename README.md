@@ -1,1 +1,1 @@
-#kteach
+Чтобы настроить БД локально, стоит посмотреть: [видео](https://www.youtube.com/watch?v=oVrmcEy3UMM)

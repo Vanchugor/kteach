@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PhisicsHelperApplication {
+public class PhysicsHelperApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PhisicsHelperApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PhysicsHelperApplication.class, args);
+    }
 
 }
