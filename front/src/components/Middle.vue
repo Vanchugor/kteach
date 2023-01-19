@@ -44,7 +44,23 @@ export default {
         ContactsSection,
         DeadlineSection,
     },
-    props: ["cycles"],
+    props: ["posts", "cycles"],
+    computed: {
+        postsIdDesc: function () {
+            return Object.values(this.posts).sort((a, b) => b.id - a.id);
+        },
+        viewPosts: function () {
+            return this.postsIdDesc.slice(0, 2);
+        },
+        postForView: function () {
+            for (const post of Object.values(this.posts)) {
+                if (post.id === this.postPageId) {
+                    return post;
+                }
+            }
+            return undefined;
+        },
+    },
     beforeCreate() {
         this.$root.$on("onChangePage", (page, kwargs = undefined) => {
             if (kwargs !== undefined) {
