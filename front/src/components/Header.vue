@@ -4,12 +4,12 @@
             <template v-if="user">
                 {{ user.name }}
                 |
-                <a href="#" @click.prevent="onLogout">Logout</a>
+                <a href="#" @click.prevent="onLogout">Выйти</a>
             </template>
             <template v-else>
-                <a href="#" @click.prevent="changePage('EnterPage')">Enter</a>
+                <a href="#" @click.prevent="changePage('EnterPage')">Войти</a>
                 |
-                <a href="#" @click.prevent="changePage('RegisterPage')">Register</a>
+                <a href="#" @click.prevent="changePage('RegisterPage')">Регистрация</a>
             </template>
         </div>
         <nav>
@@ -33,6 +33,10 @@ export default {
         changePage: function (page) {
             this.$root.$emit("onChangePage", page);
         },
+        onLogout: function () {
+            this.$root.$emit("onLogout");
+            this.changePage("Index");
+        }
     }
 }
 </script>
